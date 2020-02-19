@@ -9,38 +9,21 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="..\CSS\homepagestyle.css" />
-    <link rel="stylesheet" type="text/css" href="..\CSS\main.css">
-   <style>
-
-* { margin: 0; padding: 0; }
-		
-		html { 
-			background: url('../images/boiling stones1.jpg') no-repeat center center fixed; 
-font-family: "Lucida Sans", sans-serif;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-		}
-		
-		#page-wrap { width: 400px; margin: 40px auto; padding: 20px; background: white; -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black; }
-		
-
-</style>
-
+    <link rel="stylesheet" type="text/css" href="..\CSS\style.css" />
+    <link rel="stylesheet" type="text/css" href="..\CSS\main.css"/>
+  
 </head>
 
 <!--# Bootstrapping for adapting to devices-->
 
 <body>
- <div class="header">
+ <header>
     <div class="hero-image">
         
             <h1>Abena's World of Health and Habits</h1>
         
     </div>
-</div>
+</header>
 
  <header class="container">
      <div class="row">
@@ -60,80 +43,37 @@ font-family: "Lucida Sans", sans-serif;
      </div>
  </header>
    
-<div class="container">
-<div class="info">
-    <p> Search below for GIF Images! </p>
-      <form class="gif-form">
-        <input type="text" id="form-value" class="search-input-rounded">
-        <button type="submit" class="search_button"> Search for GIFs </button>
-        <input type="reset" id="reset_button" value="Reset">
-      </form>
-      <div class="rando_facts animated bounceIn">
-        <img id="here_is_gif" src=""/>
-      </div>
-  </div>
-
-  <!-- My JavaScript -->
-  <script type="text/javascript">
-
-    // This waits for the page to load before calling our jQuery
-    $( document ).ready(function(){
-
-      // Part 1 - Collect User Input Using jQuery Click Listener note we use the class (.) of search_button
-      $('.search_button').on('click', function(){
-
-        // Collect user by grabbing the input form's value via id (#)
-        var userInput = $('#form-value').val().trim();
-        
-        // Change the input to suit the API (ie change spaces to +)
-        userInput = userInput.replace(/ /g, "+");
-
-        // Create the Giphy API URL
-        var queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=dc6zaTOxFJmzC';
-
-        // Part 2 - Use AJAX to call GIPHY API (note that the .done() function waits for the API to respond)
-        $.ajax({url: queryURL, method: 'GET'}).done(function(response){
-
-          // This is the API response data. It's a JSON object of 25 gifs
-          console.log(response.data);
-
-          // For simplicity, we will take the first gif (ie. at postion 0)
-          var giphyURL = response.data[0].images.fixed_height.url;
-          console.log(giphyURL)
-
-          // Now you can pass that into your "here_is_gif" <img> tag using its id (#)
-          $('#here_is_gif').attr('src', giphyURL);
-
-        });
-
-         // Part 3 - Clear the Gif using the reset_button id (#)
-        $('#reset_button').on('click', function(){
-          // Grab the img using the id and change the src to empty to remove the image
-          $('#here_is_gif').attr("src",'');
-        })
-
-
-        // If using a jQuery click listner on a Submit button, you need to return false to prevent the default page refresh
-        return false;
-      })
-      
-
-    });
-
-  </script>
-<div class="row">
+    <div class="container">
+        <div class="info">
+            <p> Search below for GIF Images! </p>
+            <form class="gif-form">
+                <input type="text" id="form-value" class="search-input-rounded">
+                <button type="submit" class="search_button"> Search for GIFs </button>
+                <input type="reset" id="reset_button" value="Reset">
+            </form>
+            <div class="rando_facts animated bounceIn">
+                <img id="here_is_gif" src="" />
+            </div>
+            <div class="rando_facts animated bounceIn">
+            <img id="here_is_gif" src="" />
+        </div>
+        <div class="rando_facts animated bounceIn">
+        <img id="here_is_gif" src="" />
+    </div>
+   
+  <row>
    <div class="jumbotron">
         <!--# this is the main page of website.-->
         <!--# this paragraph describes the goal of website.-->
         <p>This is a place of inner peace, freedom, and positivity. The world can be a crazy, dramatic place. We all need a place to go inside and be with ourselves. The goal of this website to help find ways to be your best self. I needed a place of inner peace some years ago and I do now. I hope you find the resources on these pages as helpful as I have.</p>
 </div>
-</div>
+</row>
 
-  <div class="row">
+  <row>
     <div class="col-md-4">
-        <div class="polaroid">
+        <polaroid>
             <img src="..\Images\Main image.jpg" width="300" height="300" alt="Abena's World of Health and Habits" />
-        </div>
+        </polaroid>
         </div>
     <div class="col-md-8">
     
@@ -153,7 +93,7 @@ font-family: "Lucida Sans", sans-serif;
                 </fieldset>
             </form>
     </div>
-  </div>
+  </row>
     
 
 </div>
@@ -162,7 +102,7 @@ font-family: "Lucida Sans", sans-serif;
         Abena contact at : akapaw@att.net
     </div>
 
-
+<script src="..\JavaScript\gipsy.js"></script>
 </body>
 </html>
 

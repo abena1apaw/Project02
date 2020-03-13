@@ -1,6 +1,8 @@
+// JavaScript source code
+$(window).load(function () {
+
 
     // This waits for the page to load before calling our jQuery
-
     $(document).ready(function () {
 
         // Part 1 - Collect User Input Using jQuery Click Listener note we use the class (.) of search_button
@@ -13,14 +15,13 @@
             userInput = userInput.replace(/ /g, "+");
 
             // Create the Giphy API URL
-            var queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=R2NP7MwgdjjDC3cLhTidUXRKCdVQ1rsX';
+            var queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=dc6zaTOxFJmzC';
 
             // Part 2 - Use AJAX to call GIPHY API (note that the .done() function waits for the API to respond)
             $.ajax({ url: queryURL, method: 'GET' }).done(function (response) {
 
                 // This is the API response data. It's a JSON object of 25 gifs
- 		 console.log(response.data);
-                
+                console.log(response.data);
 
                 // For simplicity, we will take the first gif (ie. at postion 0)
                 var giphyURL = response.data[0].images.fixed_height.url;
@@ -30,7 +31,6 @@
                 $('#here_is_gif').attr('src', giphyURL);
 
             });
-
 
             // Part 3 - Clear the Gif using the reset_button id (#)
             $('#reset_button').on('click', function () {
@@ -43,5 +43,7 @@
             return false;
         })
 
+
     });
+});
     

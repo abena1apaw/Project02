@@ -77,7 +77,7 @@ footer .row {
   width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 36em ) {
   /* For tablets: */
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
@@ -92,7 +92,7 @@ footer .row {
   .col-s-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* For desktop: */
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
@@ -108,7 +108,7 @@ footer .row {
   .col-12 {width: 100%;}
 }
 header h1 {
-  font-weight: 700;
+  font-weight: 600;
   margin: 0;
   color: #fff;
  text-shadow: 2px 2px 4px #000;
@@ -150,6 +150,7 @@ p a:hover {
     background-color: purple;
     color: whitesmoke;
 }
+
 
 .jumbotron {
   display: flex;

@@ -1,22 +1,26 @@
 body {
-    height: 100%;
+    //height: 80%;
     margin: auto;
-    width: 60%
-       text-align: center;
+    width: 80%;
+    text-align: center;
     float: unset;
     background-color: aliceblue;
 }
+form {
+    display: inline-block;
+}
 .content {
-    max-width: 600px;
+    max-width: 80%;
     margin: auto;
 }
 /* The hero image */
 .hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (person-on-a-bridge-near-a-lake.jpg). This will make the text easier to read */
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     background-image: url(person-on-a-bridge-near-a-lake.jpg);
     /* Set a specific height */
-    //height: 50%;
+    height: 20%;
     /* Position and center the image to scale nicely on all screens */
+    /*width: 80%;*/
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -32,12 +36,12 @@ body {
     color: white;
 }
 * {
-    margin: 4px;
-    padding: 1px;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    background: url('../Images/boiling stones1.jpg') no-repeat center fixed;
+    background: url('../Images/boiling stones1.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -45,16 +49,16 @@ html {
 }
 
 #page-wrap {
-    width: 400px;
-    margin: 60px auto;
-    padding: 40px;
+    width: 200px;
+    margin: 40px auto;
+    padding: 20px;
     background: white;
     -moz-box-shadow: 0 0 20px black;
     -webkit-box-shadow: 0 0 20px black;
     box-shadow: 0 0 20px black;
 }
       h1 {
-    color: darkblue;
+    color: white;
     font-size: 56px;
     font-weight: bold;
     font-family: "Courier New",monospace;
@@ -69,6 +73,14 @@ html {
         padding: 20px;
         font-size: 17px;
     }
+h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "Courier New",monospace;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
 
 h2 {
     color: darkblue;
@@ -87,9 +99,9 @@ h2 {
       p{ 
       
       
-        color: darkblue;
+        color: #000000;
         font:18px;
-     text-align: center;
+     /*text-align: center;*/
         font-family:"Arial";
 }
    ul {
@@ -99,7 +111,14 @@ h2 {
       padding: 0;
       width: 200px;
       text-align: center;
-}   
+}
+    ul li {
+        padding-left: 8px;
+        list-style: none;
+        margin-bottom: 6px;
+        text-align: left;
+        text-indent: -12px;
+    }
   table th, td {
   padding: 15px;
   text-align: left;
@@ -110,15 +129,38 @@ h2 {
          margin: auto;
          float: left;
 }
-
-ul {
-    list-style-type: none;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    width: 200px;
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: darkblue;
+    padding: 15px 32px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+ol li {
+    padding-left: 8px;
+    margin-bottom: 6px;
+    text-align: left;
+    text-indent: 12px;
+}
+    ol.in li {
+        list-style-position: inside;
+    }
+
+    ol.out li {
+        list-style-position: outside;
+    }
 /* Style the navbar */
 #navbar {
     overflow: hidden;
@@ -135,13 +177,14 @@ ul {
         text-decoration: none;
         display: block;
         padding: 8px 16px;
+        color: Purple;
         font: 40px;
         font-family: "Courier New",monospace;
         text-align: center;
     }
 
 li a:hover {
-    background-color: gray;
+    background-color: white;
     color: black;
 }
 

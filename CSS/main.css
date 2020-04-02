@@ -19,11 +19,14 @@ footer .row {
 * {
   box-sizing: border-box;
 }
+.column {
+  width: 33.33%;
+  padding: 5px;
+}
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+/* Clearfix (clear floats) */
+.row {
+  display: flex;
 }
 
 [class*="col-"] {

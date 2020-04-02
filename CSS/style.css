@@ -15,7 +15,7 @@ form {
 /* The hero image */
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: url(/Image/person-on-a-bridge-near-a-lake.jpg);
+    background-image: url(person-on-a-bridge-near-a-lake.jpg);
     /* Set a specific height */
     height: 20%;
     /* Position and center the image to scale nicely on all screens */

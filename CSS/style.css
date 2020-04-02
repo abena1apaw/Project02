@@ -138,6 +138,7 @@ h2 {
     display: inline-block;
 }
 
+
 ol {
     display: block;
     list-style-type: decimal;
@@ -204,7 +205,7 @@ img {
 }
 
 textarea {
-    width: 50%;
+    width: 80%;
     height: 100px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -213,12 +214,12 @@ textarea {
     background-color: #f8f8f8;
     resize: none;
 }
-    div.gallery {
+div.gallery {
  position:center;
  margin: 5px;
   border: 1px solid #ccc;
   width: 250px;
-  text align: center;
+  text-align: center;
   display: inline-block;
 }
 div.polaroid {
